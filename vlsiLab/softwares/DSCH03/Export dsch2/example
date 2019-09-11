@@ -1,0 +1,44 @@
+DSCH 2.6h
+VERSION 11/10/2015 3:18:58 PM
+BB(5,-10,60,10)
+SYM  #pmos
+BB(5,-10,25,10)
+TITLE 20 5  #pmos
+MODEL 902
+PROP   2.0u 0.12u                                                                                                                                                                                                       
+REC(6,-5,19,15,r)
+VIS 2
+PIN(25,-10,0.000,0.000)s
+PIN(5,0,0.000,0.000)g
+PIN(25,10,0.030,0.070)d
+LIG(5,0,11,0)
+LIG(13,0,13,0)
+LIG(15,6,15,-6)
+LIG(17,6,17,-6)
+LIG(25,-6,17,-6)
+LIG(25,-10,25,-6)
+LIG(25,6,17,6)
+LIG(25,10,25,6)
+VLG  pmos pmos(drain,source,gate);
+FSYM
+SYM  #pmos
+BB(40,-10,60,10)
+TITLE 55 5  #pmos
+MODEL 902
+PROP   2.0u 0.12u                                                                                                                                                                                                       
+REC(41,-5,19,15,r)
+VIS 2
+PIN(60,-10,0.000,0.000)s
+PIN(40,0,0.000,0.000)g
+PIN(60,10,0.030,0.070)d
+LIG(40,0,46,0)
+LIG(48,0,48,0)
+LIG(50,6,50,-6)
+LIG(52,6,52,-6)
+LIG(60,-6,52,-6)
+LIG(60,-10,60,-6)
+LIG(60,6,52,6)
+LIG(60,10,60,6)
+VLG  pmos pmos(drain,source,gate);
+FSYM
+FFIG example

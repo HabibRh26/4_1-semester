@@ -1,0 +1,14 @@
+VERSION 2/3/2003 5:13:28 PM
+FIG #C:\Documents and Settings\Administrator\My Documents\microwind2\Book on CMOS\diode.MSK
+BB(2,13,53,43)
+SIMU #5.00
+REC(25,13,28,25,NW)
+REC(32,19,14,13,DP)
+REC(6,19,13,13,DN)
+TITLE 6 43  #Native diodes in CMOS process
+$- 1000 0 
+TITLE 2 14  #N+ over Psubstrate
+$- 1000 0 
+TITLE 32 16  #P+ over n-well
+$- 1000 0 
+FFIG C:\Documents and Settings\Administrator\My Documents\microwind2\Book on CMOS\diode.MSK
