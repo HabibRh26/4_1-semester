@@ -1,0 +1,37 @@
+VERSION 6/21/2005 12:59:01 PM
+FIG #F:\microwind\MW02\Export Microwind\chyon\nor.MSK
+BB(-18,-8,71,61)
+SIMU #5.00
+REC(-18,27,89,23,NW)
+REC(16,36,51,5,DP)
+REC(-15,36,25,5,DP)
+REC(16,-1,50,5,DN)
+REC(-12,-1,22,5,DN)
+REC(50,44,6,5,CO)
+REC(12,1,2,2,CO)
+REC(-6,-1,6,4,CO)
+REC(39,-1,6,5,CO)
+REC(39,36,6,5,CO)
+REC(12,38,2,2,CO)
+REC(-12,36,5,5,CO)
+REC(10,-8,6,54,PO)
+REC(-12,30,5,26,ME)
+REC(49,44,7,12,ME)
+REC(11,0,4,4,ME)
+REC(-6,-8,6,15,ME)
+REC(11,37,4,4,ME)
+REC(-14,56,3,5,ME)
+REC(39,-3,6,46,ME)
+REC(-11,56,69,4,ME)
+REC(45,20,12,6,ME)
+REC(10,36,6,5,DP)
+REC(10,-1,6,5,DN)
+TITLE -2 -7  #Vss
+$0 1000 0 
+TITLE 56 59  #Vdd
+$1 1000 0 
+TITLE 14 -6  #Vin
+$c 0 1000   0.48   0.50   0.98   1.00 
+TITLE 54 22  #Vout
+$v 1000 0 
+FFIG F:\microwind\MW02\Export Microwind\chyon\nor.MSK

@@ -1,0 +1,89 @@
+VERSION 16/08/02 17:36:25
+FIG #C:\microwind2\Book on CMOS\DRamEDram.MSK
+BB(-90,-8,46,93)
+SIMU #500.00
+REC(38,15,6,6,OP,8)
+REC(39,13,4,9,DN)
+REC(39,6,4,5,DN)
+REC(-15,18,40,34,DN)
+REC(-16,14,41,4,DN)
+REC(-23,14,5,4,DN)
+REC(-75,61,7,4,DN)
+REC(-76,38,7,4,DN)
+REC(-77,14,7,4,DN)
+REC(-84,61,5,4,DN)
+REC(-84,38,5,4,DN)
+REC(-84,14,5,4,DN)
+REC(-83,15,2,2,CO)
+REC(-79,55,2,2,CO)
+REC(-83,62,2,2,CO)
+REC(-22,15,2,2,CO)
+REC(-79,32,2,2,CO)
+REC(40,7,2,2,CO)
+REC(-79,8,2,2,CO)
+REC(-18,8,2,2,CO)
+REC(-83,39,2,2,CO)
+REC(39,16,4,4,P2,0)
+REC(-79,35,3,10,PO)
+REC(-18,11,2,10,PO)
+REC(-80,31,4,4,PO)
+REC(-19,7,4,4,PO)
+REC(-79,11,2,11,PO)
+REC(-80,54,5,4,PO)
+REC(-80,7,4,4,PO)
+REC(36,11,10,2,PO)
+REC(-79,58,4,10,PO)
+REC(-84,38,4,4,ME)
+REC(-87,7,22,4,ME)
+REC(-87,31,22,4,ME)
+REC(-23,14,4,4,ME)
+REC(-28,7,54,4,ME)
+REC(-84,14,4,4,ME)
+REC(39,6,4,19,ME)
+REC(-90,7,3,66,ME)
+REC(-87,54,22,4,ME)
+REC(-84,61,4,4,ME)
+REC(-83,39,2,2,VI)
+REC(-22,15,2,2,VI)
+REC(-83,15,2,2,VI)
+REC(-83,62,2,2,VI)
+REC(-84,5,4,76,M2)
+REC(-23,1,4,51,M2)
+REC(-79,14,2,4,DN)
+REC(-79,38,3,4,DN)
+REC(-79,61,4,4,DN)
+REC(-18,14,2,4,DN)
+REC(39,11,4,2,DN)
+TITLE -86 0  #Parasitic junction capacitance
+$- 1000 0 
+TITLE -22 21  #BitLine
+$w 1000 0 3 0.00 0 1.00 1 4.00 0 
+TITLE -12 8  #WordLine
+$w 1000 0 3 0.00 0 1.00 1 3.00 0 
+TITLE -14 -3  #Enlarged junction capacitance
+$- 1000 0 
+TITLE -73 16  #Data2l
+$v 1000 0 
+TITLE 41 25  #BitLine
+$- 1000 0 
+TITLE 37 28  #Embedded dynamic RAM
+$- 1000 0 
+TITLE 45 12  #WordLine
+$- 1000 0 
+TITLE 36 -8  #used to store 1 or 0
+$- 1000 0 
+TITLE 36 -4  #Specific embedded capacitance
+$- 1000 0 
+TITLE 13 49  #DataLarge
+$v 1000 0 
+TITLE -81 93  #Dynamic RAM cell
+$- 1000 0 
+TITLE -83 21  #BitLine
+$w 1000 0 3 0.00 0 1.00 1 4.00 0 
+TITLE -73 8  #WordLine
+$w 1000 0 3 0.00 0 1.00 1 3.00 0 
+TITLE -73 40  #Data3l
+$v 1000 0 
+TITLE -73 63  #Data4l
+$v 1000 0 
+FFIG C:\microwind2\Book on CMOS\DRamEDram.MSK
