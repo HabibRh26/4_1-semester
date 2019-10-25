@@ -1,0 +1,13 @@
+cr = imread('cameraman.tif');
+figure,imshow(cr)
+m = fspecial('motion',7,0);
+cm = imfilter(cr,m);
+ figure,imshow(cr),figure,imshow(cm)
+ m2 = zeros(size(cr));
+ m2(1,1:7) = m;
+ mf = fft2(m2); 
+d = 0.02;
+ mf = fft2(m2); mf(find(abs(mf)<d) = 1;
+bmi = ifft2(fft2(cm)./mf);
+imshow(mat2gray(abs(bmi))*2
+figure,imshow(mat2gray(abs(bmi))*2

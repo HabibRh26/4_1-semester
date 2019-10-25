@@ -1,0 +1,6 @@
+import numpy as np
+b = io.imread('D:\fundip\ch2_images')
+bf = fftshift(fft2(b))
+r,c = b.shape
+x,y = np.mgrid[-c/2:c/2,-r/2:r/2]
+bworth = 1/(1+(np.sqrt(2)-1)*())
