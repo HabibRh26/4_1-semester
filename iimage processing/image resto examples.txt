@@ -1,0 +1,80 @@
+ b = imread('cameraman.tif');
+bf = fft2(b);
+[r, c] = size(b);
+[x, y] = meshgrid(-c/2:c/2-1, -r/2:r/2-1);
+bworth = 1./(1+sqrt(2)-1)*((x.^2+y.^2)/15^2).^2;
+bw = bf.*bworth;
+bwa = abs(ifft2(bw));
+ blur = im2uint8(mat2gray(bwa));
+ imshow(blur)
+ figure, imshow(b), figure, imshow(blur)
+ blf = fft2(blur);
+ blfw = blf./bworth;
+
+
+edge detection
+
+v = imread('onion.png');
+>> r = edge(v(:,:,1));
+>> g = edge(v(:,:,2));
+>> b = edge(v(:,:,3));
+>> figure, imshow(r), figure, imshow(g), figure, imshow(b)
+>> res = r | g | b;
+imshow(res)
+
+
+salt and pepper:
+
+v = imread('onion.png');
+v = rgb2gray(v);
+v = imnoise(v, 'salt & pepper');
+imshow(v)
+
+lowpass = fspecial('average');
+usingLow = imfilter(v, lowpass);
+
+usingMedian = medfilt2(v);
+figure, imshow(usingLow), figure, imshow(usingMedian)
+
+gaussian
+
+v = imread('onion.png');
+v = rgb2gray(v);
+v = imnoise(v, 'gaussian');
+imshow(v)
+
+
+speckle:
+
+v = imread('onion.png');
+v = rgb2gray(v);
+v = imnoise(v, 'speckle');
+imshow(v)
+
+periodic noise
+
+v = imread('peppers.jpg');
+v = rgb2gray(v);
+
+[rs, cs] = size(v);
+[x, y] = meshgrid(1:cs, 1:rs);
+p = sin(x/3+y/5) + 1;
+vp = (2 * im2double(v)+p/2)/3;
+figure, imshow(vp)
+
+motion blur:
+
+x = imread('peppers.jpg');
+x = rgb2gray(x);
+figure, imshow(x)
+m = fspecial('motion', 7, 0);
+y = imfilter(x, m);
+f = zeros(size(x));
+f(1,1:7)=m;
+X = fft2(x);
+Y = fft2(y);
+F = fft2(f);
+d = 0.02;
+F(find(abs(F))<d)=1;
+res = ifft2(Y./F);
+figure, imshow(y), figure, imshow(mat2gray(abs(res)*2))
