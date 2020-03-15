@@ -1,0 +1,54 @@
+% q1 of slide
+% probability states before normalization in matrix form
+A1= 2; A2= 3;
+x1=12;x2=20;
+BW = 40;M= ceil(BW/x1); % size of the matrix is M by M
+for i=1:M
+for j=1:M
+e =(i-1)*x1+(j-1)*x2;
+if e<=40
+S(i,j) = (( A1^(i-1))/factorial(i-1))*((A2^(j-1))/factorial(j-1));
+else
+S(i,j) = 0;
+end
+end
+end
+% task 2,reversing the representation
+% rows should be made reversed to cope with
+% Cartesian co-ordinate system
+for i=1:M
+for j=1:M
+k = M-i+1;
+S1(i,j) = S(k,j); % sates are now S1(x,y)
+end
+end
+
+% Normalized states
+
+T = sum(sum(S1));
+Sn = S1/T;
+
+% side open states
+
+ B2 = 0;
+for i=1:M
+for j=1:M
+k = j+1;
+if Sn(i,j)>0 && Sn(i,k) == 0
+B2 = B2+Sn(i,j);
+end
+end
+end
+% open states roof
+B1 =0;
+for i = 2:M
+%index of row with k = i-1 can not be 0
+for j=1:M
+k = i-1;
+if Sn(i,j)>0 && Sn(k,j) == 0
+B1 = B1+Sn(i,j);
+end
+end
+end
+%Sn(1,1) is the default open state of roof 
+B1 = B1+Sn(1,1);
